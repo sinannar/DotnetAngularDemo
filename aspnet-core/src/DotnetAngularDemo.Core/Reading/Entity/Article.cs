@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Abp.Dependency;
 using Abp.Domain.Entities;
 
@@ -11,5 +12,7 @@ namespace DotnetAngularDemo.Reading.Entity
         public string Content { get; set; }
         public string Author { get; set; }
         public int ReadCount { get; set; }
+        public IEnumerable<ArticleCategoryMapping> CategoryMappings { get; set; }
+        public IEnumerable<ArticleKeywordMapping> KeywordMappings { get; set; }
     }
 }
